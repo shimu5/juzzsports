@@ -1,0 +1,672 @@
+/* version date: April 2014
+   sidebar a bit narrower (med-rect no longer there)
+*/
+
+* { margin:0; padding:0; }
+
+body {
+    font: 14px/1.4 verdana, arial, helvetica, sans-serif;
+    background-color:#7481A9;
+    color:#000;
+}
+
+/* =layout divs----------------- */
+div#container { 
+    min-width:1020px;
+}
+div#main, div#logo, div#menubar ul, div#copyright {
+    margin:0 auto;
+    width: 984px;
+}
+div#main {
+    padding-top: 1.4em;
+    background-color:#fff;
+    border-left:2px solid #DEE2F0;
+    border-right:2px solid #444C64;
+}
+div#content {
+    float:left;
+    width: 680px;
+    background-color:#fff;
+}
+div#sidebar {
+    float:right;
+    width: 300px;
+}
+
+/* pad main content text */
+div#text {
+    padding:0 8px .4em 16px;
+}
+
+div#header {
+    margin:0;
+    background-color: #081847;
+}
+div#footer {
+    background-color:#081847;
+    border-top:1px solid #bfc2c7;
+    border-bottom:1px solid #bfc2c7;
+}
+
+div#footer, div#footnotes, div.clearer, p.clearer, .clears {
+    clear:both;
+}
+
+/* =----------------- */
+h1, h2, h3, h4 {
+    color:#0D2878;
+    clear:both;
+}
+h1 {
+    margin: 0 0 .8em 0;
+    font-size: 1.4em;
+    padding-bottom:3px;
+    border-bottom: 1px solid #ddd;
+}
+h2 {
+    margin: 1.2em 0 .6em 0;
+    font-size: 1.3em;
+}
+h3 {
+    margin: 1.2em 0 .6em 0;
+    font-size: 1.1em;
+}
+h4 {
+    margin: 1.2em 0 .6em 0;
+    font-size: 1em;
+}
+p {
+    margin: .8em 0 .8em 0;
+}
+div#text p {
+    text-align:justify;
+}
+
+/* =----------------- */
+div#sidebar {
+    padding-top: 32px;
+}
+div#sidebar div.side_wrap {
+    background-color:#F4F5FA;
+    border-top:3px double #4B63AA;
+    border-bottom:3px double #4B63AA;
+    border-right:1px dotted #4B63AA;
+    border-left:1px dotted #4B63AA;
+    margin: 0 20px 1.2em 20px;
+}
+div#sidebar div.side_info, 
+div#sidebar div.side_links {
+    margin:0 0 .4em 0;
+}
+
+div#sidebar div.side_info:last-child,
+div#sidebar div.side_links:last-child {
+    margin-bottom:.6em;
+}
+
+div#sidebar div.side_info ul, 
+div#sidebar div.side_links ul {
+    list-style: none;
+    margin:0 4px .6em 4px;
+    padding:0;
+}
+div#sidebar div.side_info ul li,
+div#sidebar div.side_links ul li {
+    padding: .4em 0 .4em 12px;
+    margin:0;
+    background: url("/images/dot2.gif") no-repeat 2px .9em;
+    color:#032071;
+}
+div#sidebar div.side_info h4,
+div#sidebar div.side_links h4 {
+    font-size: 1.1em;
+    margin:0 0 0 0;
+    padding:3px 4px 3px 6px; 
+    color:#032071;
+    background-color:#E1E5F1;
+}
+
+div#sidebar div.side_links p,
+div#sidebar div.side_info p {
+    margin:.4em 0;
+    padding:2px 4px 2px 6px;	
+    color:#032071;
+}
+
+/* = menubar----------------- */
+div#menubar {
+    background-color:#e1e5f1; 
+    border-bottom:1px solid #bfc2c7;
+}
+div#menubar ul { 
+    padding: 0 0 0 16px;
+    list-style:none;
+    height:1.8em;
+}
+div#menubar ul li { 
+    display:inline; 
+}
+div#menubar ul li a:link, div#menubar ul li a:visited { 
+    text-decoration:none;
+    font-weight:bold; 
+    color:#011d55;
+    background-color:#e1e5f1;
+    border-left:1px solid #e1e5f1;
+    border-right:1px solid #e1e5f1;
+    padding:0px 8px;
+    display:block;
+    float:left;
+    line-height:1.8em;
+}
+div#menubar ul li a:hover { 
+    background-color:#d2d8ea; 
+    border-left:1px solid #b3b8c7;
+    border-right:1px solid #b3b8c7;
+}
+
+/* =header, footer elements----------------- */
+div#logo span {
+    display:block;
+    margin:0;
+    padding:14px 16px;
+    font-size:2em; 
+    font-family: arial, helvetica, sans-serif; 
+    letter-spacing:6px;
+}
+div#logo span a:link, 
+div#logo span a:visited { 
+    text-decoration:none; 
+    color:#fff;  
+} 
+div#copyright span {
+    display:block;
+    margin:0;
+    padding:4px 32px 4px 16px;
+    color:#fff;
+    font-family: arial, helvetica, sans-serif; 
+    font-size:.8em; 
+    letter-spacing:.15em;
+}    
+div#copyright span a { 
+    text-decoration:none; 
+    font-weight:bold; 
+} 
+div#copyright span a:link, 
+div#copyright span a:visited { 
+    color:#fff; 
+}
+div#copyright span a:hover {
+    text-decoration:underline;
+}
+
+/* =lists ----------------- */
+div#content ul, 
+div#content ol {
+    padding-left:2em;
+    margin: 1em 0 1.5em;
+}
+div#content ul li,
+div#content ol li {
+    margin-bottom:.5em;
+}
+
+/* =dl (index pages) ----------------- */
+div#content dl.idx {
+    margin: 1.1em 0 2em 0;
+    padding:0; 
+}
+
+div#content dl.idx dt {
+    font-weight:bold;
+    margin: .8em 0 .5em;
+    padding:0; 
+}
+div#content dl.idx dd {
+    margin:0 0 1.4em 1.6em;
+    padding:0; 
+    text-align:justify;
+}
+    
+/* p matches dd (main index file: code, business, tut's) */
+.m_idx div#content p {
+    margin-left:1.6em;
+}
+    
+div#content dl.idx dt a {
+    font-weight:bold;
+    text-decoration:none;
+    padding:0;
+    border:none;
+}
+    
+div#content dl.idx dt a:link,
+div#content dl.idx dt a:visited {
+    text-decoration:none;
+    padding:0;
+    border:none;
+    border-bottom:1px dotted #4B63AA;
+}
+
+div#content dl.idx dt a:hover {
+    padding:0; border:none;
+    border-bottom:1px solid #0D2878;
+    background:transparent;
+}
+
+/* =documentation ----------------- */
+/* some uses adjust width of dt, dd  */
+div#content dl.docs {
+    float:left;
+    width:100%;
+    margin: 0 0 1.6em 0; 
+}
+div#content dl.docs dt {
+    width:25%;
+    float:left;
+    padding:1em 0 .8em 1em;
+    color:#0D2878;
+    font-weight:bold;
+    clear:left;
+}
+div#content dl.docs dd {
+    float:left;
+    width:65%;
+    padding:1em 0 .8em 0;
+}
+
+/* =instructions ----------------- */
+/* instructions in ordered list with links to specifics below */
+ol.instr_links {
+    background-color: #F4F5FA;
+    padding: 4px 4px 4px 2em;
+}
+div#content ol.instr_links li {
+    margin-bottom:.6em;
+}
+div#content h3.instructions {
+    border:none;
+    background:#F4F5FA url(/images/nav/rt.gif) no-repeat 2px 50%;
+    padding:4px 0 4px 20px;
+    line-height:1;
+    font-weight:normal;
+    margin:1.4em 0 .8em 0;
+}
+
+
+/* =link colors ----------------- */
+div#content a {
+    padding:0 1px 0 0;
+    border:1px solid #fff;
+}
+div#content a:link {
+    color:#0F2F8D;
+}
+div#content a:visited {
+    color:#667295;
+}
+div#content a:hover {
+    text-decoration:none;
+    color:#0D2878;
+    background-color: #E9ECF5;
+    border: 1px solid; 
+    border-color: #F1F1F1 #C0C0C0 #C0C0C0 #F1F1F1; 
+}
+
+/* to remove border or hover background effects on links around images,
+   or other links with alt class */
+div#content .hasImage a,
+div#content .hasImage a:link,
+div#content .hasImage a:visited,
+div#content .hasImage a:hover,
+div#content a.alt,
+div#content a.alt:link,
+div#content a.alt:visited,
+div#content a.alt:hover {
+    text-decoration:none;
+    border:none;
+    padding:0;
+    background:transparent;
+}
+a img {
+    border:none;
+}
+
+/* =sidebar links----------------- */
+div#sidebar div.side_links a,
+div#sidebar div.side_info a {
+    text-decoration:none;
+}
+div#sidebar div.side_links a:link,
+div#sidebar div.side_info a:link {
+    color:#0F2F8D;
+    border-bottom:1px dotted #99a3c1;
+}
+div#sidebar div.side_links a:visited,
+div#sidebar div.side_info a:visited {
+    color:#667295;
+    border-bottom:1px dotted #99a3c1;
+}
+div#sidebar div.side_links a:hover,
+div#sidebar div.side_info a:hover { 
+    color:#0F2F8D;
+    border-bottom:1px solid #4B63AA;
+}
+div#sidebar div.side_info .hasImage a,
+div#sidebar div.side_info .hasImage a:link,
+div#sidebar div.side_info .hasImage a:visited,
+div#sidebar div.side_info .hasImage a:hover,
+div#sidebar div.side_info a.alt,
+div#sidebar div.side_info a.alt:link,
+div#sidebar div.side_info a.alt:visited,
+div#sidebar div.side_info a.alt:hover {
+    text-decoration:none;
+    border-bottom:none;
+}
+
+
+/* =footnotes ----------------- */
+div#content small.fnote {
+    vertical-align:top;
+}
+div#content small.fnote a {
+    padding:0 1px;
+    text-decoration:none;
+    border:none;
+}
+div#content small.fnote a:link,
+div#content small.fnote a:visited {
+    border-bottom:1px dotted #4B63AA;
+}
+div#content small.fnote a:hover { 
+    border-bottom:1px solid #4B63AA;
+    background:transparent;
+}
+div#content small.fnote a:target {
+    background-color: #E9ECF5;
+}
+
+div#footnotes hr {
+    padding:0; margin:1.4em 0;
+    width: 140px;
+    height:0;
+    border-top:1px solid #ddd;
+    text-align:left;
+}
+
+div#footnotes li {
+    font-size: .9em;
+}
+    
+div#footnotes ol a.f_back {
+    font-weight:bold;
+    text-decoration:none;
+    padding:0 1px; border:none;
+}
+div#footnotes ol li a.f_back:link,
+div#footnotes ol li a.f_back:visited {
+    text-decoration:none;
+    border-bottom:1px dotted #4B63AA;
+}
+
+div#footnotes ol li a.f_back:hover {
+    border-bottom:1px solid #4B63AA;
+    background:transparent;
+}
+
+/* =external and email links ----------------- */
+div#content a.external {
+    text-decoration:none;
+    padding:0 12px 0 1px;
+    background:url(/images/nav/external.gif) transparent center right no-repeat;
+    border:none;
+}
+div#content a.mail {
+    text-decoration:none;
+    padding:0 14px 0 1px;
+    background:url(/images/nav/mail.gif) transparent center right no-repeat;
+    border:none;
+}
+div#content a.external:link,
+div#content a.external:visited,
+div#content a.mail:link,
+div#content a.mail:visited {
+    color:#0F2F8D;
+    border-bottom:1px dotted #4B63AA;
+}
+div#content a.external:hover,
+div#content a.mail:hover {
+    border-bottom:1px solid #4B63AA;
+}
+
+/* =in-page links ----------------- */
+div#content a.below {
+    text-decoration:none;
+    padding:0 12px 0 1px;
+    background:url(/images/nav/below.gif) transparent right center no-repeat;
+    border:none;
+}
+div#content a.above {
+    text-decoration:none;
+    padding:0 12px 0 1px;
+    background:url(/images/nav/back_up.gif) transparent right center no-repeat;
+    border:none;
+}
+div#content a.below:link,
+div#content a.below:visited, 
+div#content a.above:link,
+div#content a.above:visited {
+    color:#0F2F8D;
+    border-bottom:1px dotted #4B63AA;
+}
+div#content a.below:hover,
+div#content a.above:hover {
+    border-bottom:1px solid #4B63AA;
+}
+
+    
+/* =link back ----------------- */
+/* like footnote up-caret, for use with instructions */    
+div#content a.link_back {
+    font-weight:bold;
+    text-decoration:none;
+    padding:0 1px;
+    border:none;
+}
+div#content a.link_back:link,
+div#content a.link_back:visited {
+    text-decoration:none;
+    border-bottom:1px dotted #4B63AA;
+}
+
+div#content a.link_back:hover {
+    border-bottom:1px solid #4B63AA;
+    background:transparent;
+}
+
+/* = demo links (iframes tut) ----------------- */
+div#content ul.demoLinks {
+    padding:1px 0; 
+    margin:1em 0 .6em 0;
+    list-style-type:none;
+}
+div#content ul.demoLinks li {
+    display:inline; 
+    padding:0 12px 0 0;
+}
+div#content ul.demoLinks li a {
+    text-decoration:none;
+    padding:0; 
+    border:none;
+}
+div#content ul.demoLinks li a:link,
+div#content ul.demoLinks li a:visited {
+    color:#0F2F8D;
+    border-bottom:1px dotted #99a3c1;
+}
+div#content ul.demoLinks li a:hover { 
+    background-color:transparent;
+    border-bottom:1px solid #4B63AA;
+}
+
+
+/* =misc ----------------- */    
+p#end { /* link to top */
+    margin-top:1.2em;
+}
+
+span.news { 
+    font-style:italic; 
+    font-weight:bold; 
+    color:#0D2878;
+}
+span.em { 
+    font-weight:bold; 
+    color:#0D2878;
+}
+
+pre {
+    /* list of fonts from stackoverflow */
+    font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono',
+            'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
+    color:#a33;
+    margin: .5em 0 .5em 0; 
+}
+code { 
+    font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono',
+            'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
+    color:#a33;
+}
+
+abbr {
+    border-bottom:1px dotted #4B63AA;
+}
+
+/* =google search ----------------- */
+div#sidebar div.side_info div.search img,
+div#content div.search img {
+    vertical-align:bottom;
+}
+div#sidebar div.side_info div.search p {
+    margin:.3em 0;
+}
+
+div#sidebar div.side_info div.search input#q {
+    width: 90%;
+    margin-left:2px;
+    margin-bottom: 4px;
+}
+
+div#sidebar div.side_info div.search input.btn {
+    margin-left:2px;
+}
+
+
+
+/* = highlight_file, etc.----------------- */
+div.code_view {
+    width:98%; 
+    height:auto; /* some pages set height or max-height */
+    margin:1.2em 0 1.4em 0;
+    padding-left:8px;
+    border:1px solid #ddd;
+    overflow:auto;
+}
+
+/* = sizer div (fontsizer) ----------------- */
+div#sizer {
+    margin:0 0 1.2em 20px;
+    color:#032071;
+}
+div#sizer img {
+    margin-right:2px;
+}
+
+/* for ie8+ (wraps tightly) */
+input[type=submit], input[type=button], input[type=reset] {
+    padding:1px 4px;
+}
+
+/* = google ads ----------------- */
+
+/* lg-rect at bottom of page */
+div.google_ad {
+    margin: 2em 0;
+}
+
+div.google_lg_flt {
+    float: left;
+    width: 340px;
+    margin: 1.4em 0 2em 0;
+}
+
+/* related links floated by lg-rect ad */
+div#content div.rel_links {
+    width: 280px;
+    float: right;
+    margin: 1.4em 0 2em;
+    background-color: #F4F5FA;
+    padding: 6px 4px 6px 6px;
+}
+
+div#content div.rel_links h4 {
+    font-size: 1.1em;
+    margin: 0 0 .4em 0;
+}
+
+div#content div.rel_links ul {
+    list-style: none;
+    margin:0 4px .6em 0;
+    padding:0;
+}
+
+div#content div.rel_links ul li {
+    padding: .4em 0 .4em 12px;
+    margin:0;
+    background: url("/images/dot2.gif") no-repeat 2px .9em;
+    color:#032071;
+}
+
+div#content div.rel_links a {
+    text-decoration:none;
+    border:none;
+}
+
+div#content div.rel_links a:link {
+    color:#0F2F8D;
+    border-bottom:1px dotted #99a3c1;
+}
+
+div#content div.rel_links a:visited {
+    color:#667295;
+    border-bottom:1px dotted #99a3c1;
+}
+
+div#content div.rel_links a:hover {
+    color:#0F2F8D;
+    border-bottom:1px solid #4B63AA;
+    background: transparent;
+}
+
+/* med-rect ads */
+div#content div.google_m_rect_lft {
+    float: left;
+    width: 300px;
+    margin: 4px 14px 6px 0;
+}
+
+div#content div.google_m_rect_rt {
+    float: right;
+    width: 300px;
+    margin: 4px 0 6px 14px;
+}
+
+/* discontinue */
+div#sidebar div.google_m_rect {
+    margin: 2em 20px;
+}
+
+div.google_leaderboard {
+    margin: .6em auto 2em 16px;
+}
+

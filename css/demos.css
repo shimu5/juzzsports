@@ -1,0 +1,36 @@
+body {
+	font-size: .7em;
+	font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+}
+
+table {
+	font-size: 1em;
+}
+#signupForm table tr td {
+	min-width: 100px;
+}
+.demo-description {
+	clear: both;
+	padding: 12px;
+	font-size: 1.3em;
+	line-height: 1.4em;
+}
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
+
+.error{
+    border-color: red !important;
+}
+label.error{
+    color: red;
+    display: inline;
+    padding-left: 8px;
+}
+/*.valid{
+    border-color: green;
+}*/
+#date-range201, #date-range200{
+    width: 80px;
+}
